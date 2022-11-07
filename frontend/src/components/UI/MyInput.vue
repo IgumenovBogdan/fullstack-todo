@@ -1,13 +1,5 @@
 <template>
-  <div class="input-group rounded">
-    <input :value="modelValue"
-           @input="updateInput"
-           type="search"
-           class="form-control rounded"
-           aria-describedby="search-addon"
-           placeholder="Search..."
-    />
-  </div>
+  <input :value="modelValue" @input="updateInput" class="input" type="text">
 </template>
 
 <script>

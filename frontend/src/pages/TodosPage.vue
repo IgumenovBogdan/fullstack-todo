@@ -5,6 +5,7 @@
         :model-value="searchQuery"
         @update:model-value="setSearchQuery"
         v-focus
+        placeholder="Search..."
         v-debounce:300="fetchTodos"
     />
     <div class="app__btns">

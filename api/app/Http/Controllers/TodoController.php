@@ -59,8 +59,6 @@ class TodoController extends Controller
     protected function resourceAbilityMap(): array
     {
         return [
-          'index' => 'access',
-          'store' => 'access',
           'show' => 'access',
           'update' => 'access',
           'destroy' => 'access',
