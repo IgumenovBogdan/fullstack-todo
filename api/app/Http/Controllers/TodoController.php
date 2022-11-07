@@ -21,6 +21,7 @@ class TodoController extends Controller
         private readonly TodosRepository $todosRepository
     )
     {
+        $this->authorizeResource(Todo::class);
     }
 
     public function index(SearchTodosRequest $request): AnonymousResourceCollection
@@ -53,5 +54,17 @@ class TodoController extends Controller
     public function toggleTodo($id): TodoResource
     {
         return $this->todoService->toggleTodo($id);
+    }
+
+    protected function resourceAbilityMap(): array
+    {
+        return [
+          'index' => 'access',
+          'store' => 'access',
+          'show' => 'access',
+          'update' => 'access',
+          'destroy' => 'access',
+          'toggleTodo' => 'access',
+        ];
     }
 }
